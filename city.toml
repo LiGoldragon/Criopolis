@@ -1,0 +1,8 @@
+[workspace]
+provider = "claude"
+install_agent_hooks = ["claude", "codex"]
+
+[daemon]
+patrol_interval = "30s"
+formula_v2 = true
+max_restarts = 5

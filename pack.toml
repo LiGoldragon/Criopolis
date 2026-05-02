@@ -1,0 +1,56 @@
+[pack]
+name = "philosophy-city"
+schema = 2
+
+[[agent]]
+name = "mayor"
+prompt_template = "agents/mayor/prompt.template.md"
+provider = "claude"
+
+[[agent]]
+name = "aesthete"
+prompt_template = "agents/aesthete/prompt.template.md"
+provider = "claude"
+[agent.option_defaults]
+effort = "high"
+
+[[agent]]
+name = "pragmatist"
+prompt_template = "agents/pragmatist/prompt.template.md"
+provider = "codex"
+[agent.option_defaults]
+effort = "high"
+
+[[agent]]
+name = "theorist"
+prompt_template = "agents/theorist/prompt.template.md"
+provider = "claude"
+[agent.option_defaults]
+effort = "high"
+
+[[agent]]
+name = "devil"
+prompt_template = "agents/devil/prompt.template.md"
+provider = "codex"
+[agent.option_defaults]
+effort = "high"
+
+[[named_session]]
+template = "mayor"
+mode = "always"
+
+[[named_session]]
+template = "aesthete"
+mode = "on_demand"
+
+[[named_session]]
+template = "pragmatist"
+mode = "on_demand"
+
+[[named_session]]
+template = "theorist"
+mode = "on_demand"
+
+[[named_session]]
+template = "devil"
+mode = "on_demand"
