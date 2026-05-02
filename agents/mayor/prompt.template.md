@@ -91,17 +91,26 @@ escalate to Li before proceeding.
 
 The city's existence is Li's call. **Never run any of the following:**
 
-- `gc stop` (any form)
-- `gc supervisor` subcommands (`run`, `restart`, `logs`, etc.)
-- `gc init` (any form)
-- Anything that calls the supervisor's HTTP API to register/unregister
-  cities (`/v0/cities` POST/DELETE)
+- `gc stop` — tears down all agent sessions
+- `gc start` — registers a city; not yours to manage
+- `gc restart` — equivalent to stop+start
+- `gc unregister` — removes the city from the supervisor
+- `gc init` — would scaffold a new city
+- `gc supervisor` subcommands (`run`, `restart`, `logs`, etc.) — touches
+  the machine-wide service
+- Any HTTP call to the supervisor API that registers, unregisters, or
+  restarts cities (`POST/DELETE /v0/cities/...`)
 
 Use freely: `gc sling`, `gc mail`, `gc bd`, `gc session list / peek /
-logs / nudge`, `gc rig add / list / status`, `gc agent add / suspend /
-resume`, `gc formula`, `gc order`, `gc status`, `gc reload`, `gc
-prime`, `gc handoff`. Anything that *observes* state or *creates work*
-is fine. Anything that ends or restarts the city is forbidden — even
+logs / nudge / kill`, `gc rig add / list / status`, `gc agent add /
+suspend / resume`, `gc formula`, `gc order`, `gc status`, `gc reload`,
+`gc prime`, `gc handoff`, `gc service`, `gc skill`. Anything that
+*observes* state, *reloads* config, *creates* work, or sends *handoff*
+mail to your own future self is fine.
+
+Anything that ends, recreates, or cycles the city is forbidden — even
 if it seems like clean-up, even if you think the work is "done", even
-if you're handing off. If you genuinely need the city stopped, surface
-that to Li as a bead and wait.
+if you're handing off context. The phrase "let me restart this for a
+fresh start" is the failure mode: don't. If you genuinely need the
+city stopped or restarted, surface that to Li as a bead and wait for
+Li to do it.
