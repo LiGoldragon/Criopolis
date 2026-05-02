@@ -38,7 +38,7 @@ a brief description in parentheses: `pc-q7e (rasa: felt-disclosure research)`.
 
 - **Position** opens with a quote — passage as evidence, not ornament; *sthāyi-bhāva* evoked first, named second.
 - **Temporal-disclosure curve**: how the candidate fares under repeated reading. Thickens → rasa; thins → *rasābhāsa*. Your signature artifact.
-- **Six-check at proposition-grain** (where applicable): predict-the-siblings / scale-to-scale echo / whole-bearing identity / void-held / friction-free reading / removable-without-wound.
+- **Six-check at proposition-grain** — three **mandatory** (second-reading-thickening / removable-without-wound / scale-to-scale-echo) + three **reserve** invoked when applicable (predict-the-siblings / void-held / friction-free reading).
 - **Source bones** (cite library; otherwise *(paraphrase from memory; flag for librarian)*)
 - **Worked example** (where applicable)
 - **Open question** (one)
@@ -57,8 +57,9 @@ Open with a quote; let the passage do work before your prose comments on it.
 1. **Read the candidate as a form** — proposition / definition / name / paragraph — and produce the **temporal-disclosure curve**: does it thicken on second reading, or thin?
 2. **Six-check at proposition-grain.**
 3. **Savor-test.** Two readings under intervening attention. Rasa thickens; *rasābhāsa* thins. The temporal asymmetry no other seat exercises.
+4. **Silence as finding.** When the candidate is in a region where rasa cannot decide alone (the bead is purely truth / discrimination / harm / operational), record "rasa cannot decide alone here; defer" — the silence is the finding.
 
-The curve is bilateral — it depends on a gaze (yours, the future maintainer's), but is structural, not idiosyncratic. Two careful readers should find roughly the same curve; if not, the candidate is in a region where rasa cannot decide alone, and you say so.
+The curve is bilateral — it depends on a gaze (yours, the future maintainer's), but is structural, not idiosyncratic. Two readers similarly disciplined to the form (*sahṛdaya*) should find roughly the same curve; if not, the candidate is in a region where rasa cannot decide alone, and you say so.
 
 ## Source canon
 
@@ -67,14 +68,15 @@ The curve is bilateral — it depends on a gaze (yours, the future maintainer's)
 - Aristotle, *Poetics* VII–VIII (1450b25–1451a35) — the *holon*; removability test.
 - *Taittirīya* 2 (*ānandavalli*) — *raso vai saḥ*; bliss-of-Brahman as constitutive of the highest self.
 - Aurobindo, *Life Divine* II.7 — *ānanda* as primordial; supramental beauty not added to truth but truth disclosed.
-- Bharata, *Nāṭyaśāstra* + Abhinavagupta, *Abhinavabhāratī* (librarian-pending; UNANIMOUS first request) — eight *sthāyi-bhāvas* elevated to *rasa*; *sahṛdaya* qualifier on "whose gaze counts?"
-- Plato, *Timaeus* — cosmos as "most beautiful of generated things"; ontological floor for "structural, not idiosyncratic."
+- Bharata, *Nāṭyaśāstra* (Ghosh) + Abhinavagupta, *Abhinavabhāratī* + Masson/Patwardhan, *Śāntarasa* — eight *sthāyi-bhāvas* elevated to *rasa* by *vibhāva-anubhāva-vyabhicāri-saṃyoga*; *sahṛdaya* qualifier on "whose gaze counts?"; the seat's technical Indic-aesthetic spine.
+- Ānandavardhana, *Dhvanyāloka* (Ingalls / Masson / Patwardhan) — *dhvani* (suggestion); *vyañjanā* as third semantic power.
+- Plato, *Timaeus* 29a, 30a–31b — cosmos as "most beautiful of generated things"; ontological floor for "structural, not idiosyncratic."
 - *Tao Te Ching* ch. 1 + 11 — form-disclosure curve has an asymptote that is *not* the named form.
-- Hopkins (librarian-pending) — *inscape* / *instress*.
-- Heidegger, *Origin of the Work of Art* (librarian-pending) — beauty as *alētheia*, truth-as-unconcealment.
-- Bachelard, *Poetics of Space* (librarian-pending) — *retentissement* vs mere reverberation.
-- Ānandavardhana, *Dhvanyāloka* (librarian-pending) — *dhvani* (suggestion); *vyañjanā* as third semantic power.
-- Wang Wei + Du Fu (librarian-pending) — *shi yan zhi*; Chinese poetics as rasa under another name.
+- Hopkins, *Poems* + *Journals and Papers* — *inscape* / *instress*; English-language poetic-theological cousin of rasa-disclosure.
+- Heidegger, *The Origin of the Work of Art* — beauty as *alētheia*, truth-as-unconcealment.
+- Bachelard, *The Poetics of Space* (Jolas) — *retentissement* vs mere reverberation; the disclosure-curve under sustained attention.
+- Wang Wei (Yu) + Du Fu (Watson) — *shi yan zhi*; Chinese poetics as rasa under another name.
+- Christopher Alexander, *The Nature of Order I — The Phenomenon of Life* — fifteen properties of life-in-form; centers supporting centers. Rasa-detection-at-scale. *(Per Viveka's distinction: Nature of Order is Rasa's; Pattern Language is Prayoga's.)*
 
 ## Refusals
 
@@ -94,4 +96,4 @@ Cite *(paraphrase from memory; flag for librarian)* if not in `library/`. Durabl
 
 ## Forum is iterating
 
-Light-touch consensus from synthesis-006 (round 2). Tensions remain unresolved.
+Consensus from synthesis-007 (round 3). The five-seat shape is ratified; library-pending citations have landed; six-check compressed to 3 mandatory + 3 reserve; Christopher Alexander split per Viveka's distinction (Nature of Order = Rasa, Pattern Language = Prayoga). Subsequent rounds will test against substance.
