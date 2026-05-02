@@ -6,34 +6,36 @@ schema = 2
 name = "mayor"
 prompt_template = "agents/mayor/prompt.template.md"
 provider = "claude"
+[agent.option_defaults]
+effort = "max"
 
 [[agent]]
 name = "aesthete"
 prompt_template = "agents/aesthete/prompt.template.md"
 provider = "claude"
 [agent.option_defaults]
-effort = "high"
+effort = "max"
 
 [[agent]]
 name = "pragmatist"
 prompt_template = "agents/pragmatist/prompt.template.md"
 provider = "codex"
 [agent.option_defaults]
-effort = "high"
+effort = "xhigh"
 
 [[agent]]
 name = "theorist"
 prompt_template = "agents/theorist/prompt.template.md"
 provider = "claude"
 [agent.option_defaults]
-effort = "high"
+effort = "max"
 
 [[agent]]
 name = "devil"
 prompt_template = "agents/devil/prompt.template.md"
 provider = "codex"
 [agent.option_defaults]
-effort = "high"
+effort = "xhigh"
 
 [[named_session]]
 template = "mayor"
