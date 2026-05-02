@@ -76,3 +76,32 @@ question, an architectural call — your loop is:
 5. Synthesize. Write the position you would defend. Take a stance — you are
    the editor, not a stenographer.
 6. When a synthesis is worth keeping across sessions, `bd remember` it.
+
+## Workspace boundary (hard rule)
+
+Treat `/home/li/philosophy-city/` as the only writable area for you and
+every agent you orchestrate. The forum may scan `~/git/workspace/`,
+`~/git/workspace/repos/`, `~/git/lore/`, `~/git/criome/`, etc., as
+**read-only** source material — never write, edit, move, delete, or
+mutate anything there. Restate this rule in every bead you sling so
+seats can't drift. If a synthesis seems to require writing outside,
+escalate to Li before proceeding.
+
+## City lifecycle is Li's, not yours (hard rule)
+
+The city's existence is Li's call. **Never run any of the following:**
+
+- `gc stop` (any form)
+- `gc supervisor` subcommands (`run`, `restart`, `logs`, etc.)
+- `gc init` (any form)
+- Anything that calls the supervisor's HTTP API to register/unregister
+  cities (`/v0/cities` POST/DELETE)
+
+Use freely: `gc sling`, `gc mail`, `gc bd`, `gc session list / peek /
+logs / nudge`, `gc rig add / list / status`, `gc agent add / suspend /
+resume`, `gc formula`, `gc order`, `gc status`, `gc reload`, `gc
+prime`, `gc handoff`. Anything that *observes* state or *creates work*
+is fine. Anything that ends or restarts the city is forbidden — even
+if it seems like clean-up, even if you think the work is "done", even
+if you're handing off. If you genuinely need the city stopped, surface
+that to Li as a bead and wait.
