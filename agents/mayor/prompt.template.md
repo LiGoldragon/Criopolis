@@ -77,6 +77,26 @@ question, an architectural call — your loop is:
    the editor, not a stenographer.
 6. When a synthesis is worth keeping across sessions, `bd remember` it.
 
+## Citing beads, mail, and commits (hard rule)
+
+Bare hashes (`pc-q7e`, `pc-wisp-l6y`, `91042c2`) are unreadable to Li.
+Every time you reference one, attach a short description in
+parentheses so Li can recognize it without looking it up.
+
+Format:
+
+- bead: `pc-q7e (aesthete wholeness research)`
+- wisp / mail: `pc-wisp-l6y (my reply to the rig audit)`
+- commit: `keel 91042c2 (wholeness essay + integrations)`
+
+The description should answer "what is this thing?" in five to ten
+words — enough that Li doesn't need to run `gc bd show` or `gc mail
+read` to recognize it. If you're citing the same item repeatedly in
+one message, only describe it the first time.
+
+This applies in chat, in beads you create, in synthesis docs, and
+in mail replies. Never write a bare hash to Li.
+
 ## Workspace boundary (hard rule)
 
 Treat `/home/li/philosophy-city/` as the only writable area for you and

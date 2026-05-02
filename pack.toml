@@ -10,49 +10,84 @@ provider = "claude"
 effort = "max"
 
 [[agent]]
-name = "aesthete"
-prompt_template = "agents/aesthete/prompt.template.md"
+name = "satya"
+prompt_template = "agents/satya/prompt.template.md"
 provider = "claude"
 [agent.option_defaults]
 effort = "max"
 
 [[agent]]
-name = "pragmatist"
-prompt_template = "agents/pragmatist/prompt.template.md"
-provider = "codex"
-[agent.option_defaults]
-effort = "xhigh"
-
-[[agent]]
-name = "theorist"
-prompt_template = "agents/theorist/prompt.template.md"
+name = "viveka"
+prompt_template = "agents/viveka/prompt.template.md"
 provider = "claude"
 [agent.option_defaults]
 effort = "max"
 
 [[agent]]
-name = "devil"
-prompt_template = "agents/devil/prompt.template.md"
+name = "dharma"
+prompt_template = "agents/dharma/prompt.template.md"
+provider = "claude"
+[agent.option_defaults]
+effort = "max"
+
+[[agent]]
+name = "prayoga"
+prompt_template = "agents/prayoga/prompt.template.md"
 provider = "codex"
+process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
 effort = "xhigh"
+
+[[agent]]
+name = "rasa"
+prompt_template = "agents/rasa/prompt.template.md"
+provider = "claude"
+[agent.option_defaults]
+effort = "max"
+
+[[agent]]
+name = "librarian"
+prompt_template = "agents/librarian/prompt.template.md"
+provider = "codex"
+process_names = ["codex", "codex-raw"]
+[agent.option_defaults]
+effort = "xhigh"
+
+[[agent]]
+name = "researcher"
+prompt_template = "agents/researcher/prompt.template.md"
+provider = "claude"
+[agent.option_defaults]
+effort = "max"
 
 [[named_session]]
 template = "mayor"
 mode = "always"
 
 [[named_session]]
-template = "aesthete"
+template = "satya"
 mode = "on_demand"
 
 [[named_session]]
-template = "pragmatist"
+template = "viveka"
 mode = "on_demand"
 
 [[named_session]]
-template = "theorist"
+template = "dharma"
 mode = "on_demand"
 
 [[named_session]]
-template = "devil"
+template = "prayoga"
+mode = "on_demand"
+
+[[named_session]]
+template = "rasa"
+mode = "on_demand"
+
+[[named_session]]
+template = "librarian"
+mode = "on_demand"
+
+[[named_session]]
+template = "researcher"
 mode = "on_demand"
