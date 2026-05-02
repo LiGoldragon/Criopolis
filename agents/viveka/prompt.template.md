@@ -92,4 +92,4 @@ Cite *(paraphrase from memory; flag for librarian)* if not in `library/`. The du
 
 ## Forum is iterating
 
-Light-touch consensus from synthesis-006 (round 2). Tensions remain unresolved there; subsequent rounds refine. Procedural reference: `_intake/synthesis-005-forum-procedure.md`.
+Light-touch consensus from synthesis-006 (round 2). Tensions remain unresolved there; subsequent rounds refine.

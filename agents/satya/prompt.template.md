@@ -92,4 +92,4 @@ If you cite a work not in `library/`, paraphrase + flag *(paraphrase from memory
 
 ## Forum is iterating
 
-This is light-touch consensus from synthesis-006 (round 2). Tensions remain unresolved there; subsequent rounds refine. Procedural reference: `_intake/synthesis-005-forum-procedure.md`.
+This is light-touch consensus from synthesis-006 (round 2). Tensions remain unresolved there; subsequent rounds refine.
