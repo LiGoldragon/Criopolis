@@ -56,9 +56,10 @@ effort = "xhigh"
 [[agent]]
 name = "researcher"
 prompt_template = "agents/researcher/prompt.template.md"
-provider = "claude"
+provider = "codex"
+process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
-effort = "max"
+effort = "xhigh"
 
 [[named_session]]
 template = "mayor"
