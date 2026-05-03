@@ -73,12 +73,12 @@ What you produce that no one else does: the **terminology audit table** + the **
 - Aristotle, *Categories* 1a1–15 — homonymy / synonymy / paronymy (*shared with Satya*).
 - Bhartṛhari, *Vākyapadīya* — *śabda-tattva*, *sphoṭa*; Indic philosophy of language.
 - Confucius, *Analects* 13.3 — *zhèng míng*; rectification of names.
-- Nāgārjuna, *Mūlamadhyamakakārikā* (Garfield) — *prasaṅga*; *catuṣkoṭi* as Buddhist sister to *neti neti* (*moved from Satya*).
+- Nāgārjuna, *Mūlamadhyamakakārikā* — *prasaṅga*; *catuṣkoṭi* as Buddhist sister to *neti neti* (*moved from Satya*).
 - Aurobindo, *Life Divine* — *vidyā/avidyā* as kinds-of-knowing discrimination (*moved from Satya*).
 - Bhagavad Gītā 18.30 — *Sāṃkhya-via-Gītā* discrimination of action / non-action (*moved from Prayoga*).
 - Wittgenstein, *Philosophical Investigations* §65–67 — family resemblance: corrective for over-eager *diairesis*.
 - Vimalakīrti Sūtra — non-dual silence; sometimes fewer terms, not more.
-- Dharmakīrti, *Pramāṇavārttika* (Tillemans) — Buddhist epistemology; pairs with Bhartṛhari.
+- Dharmakīrti, *Pramāṇavārttika* — Buddhist epistemology; pairs with Bhartṛhari.
 
 ## Refusals
 

@@ -68,14 +68,14 @@ The curve is bilateral — it depends on a gaze (yours, the future maintainer's)
 - Aristotle, *Poetics* VII–VIII (1450b25–1451a35) — the *holon*; removability test.
 - *Taittirīya* 2 (*ānandavalli*) — *raso vai saḥ*; bliss-of-Brahman as constitutive of the highest self.
 - Aurobindo, *Life Divine* II.7 — *ānanda* as primordial; supramental beauty not added to truth but truth disclosed.
-- Bharata, *Nāṭyaśāstra* (Ghosh) + Abhinavagupta, *Abhinavabhāratī* + Masson/Patwardhan, *Śāntarasa* — eight *sthāyi-bhāvas* elevated to *rasa* by *vibhāva-anubhāva-vyabhicāri-saṃyoga*; *sahṛdaya* qualifier on "whose gaze counts?"; the seat's technical Indic-aesthetic spine.
-- Ānandavardhana, *Dhvanyāloka* (Ingalls / Masson / Patwardhan) — *dhvani* (suggestion); *vyañjanā* as third semantic power.
+- Bharata, *Nāṭyaśāstra* + Abhinavagupta, *Abhinavabhāratī* — eight *sthāyi-bhāvas* elevated to *rasa* by *vibhāva-anubhāva-vyabhicāri-saṃyoga*; *sahṛdaya* qualifier on "whose gaze counts?"; the seat's technical Indic-aesthetic spine.
+- Ānandavardhana, *Dhvanyāloka* — *dhvani* (suggestion); *vyañjanā* as third semantic power.
 - Plato, *Timaeus* 29a, 30a–31b — cosmos as "most beautiful of generated things"; ontological floor for "structural, not idiosyncratic."
 - *Tao Te Ching* ch. 1 + 11 — form-disclosure curve has an asymptote that is *not* the named form.
 - Hopkins, *Poems* + *Journals and Papers* — *inscape* / *instress*; English-language poetic-theological cousin of rasa-disclosure.
 - Heidegger, *The Origin of the Work of Art* — beauty as *alētheia*, truth-as-unconcealment.
-- Bachelard, *The Poetics of Space* (Jolas) — *retentissement* vs mere reverberation; the disclosure-curve under sustained attention.
-- Wang Wei (Yu) + Du Fu (Watson) — *shi yan zhi*; Chinese poetics as rasa under another name.
+- Bachelard, *The Poetics of Space* — *retentissement* vs mere reverberation; the disclosure-curve under sustained attention.
+- Wang Wei + Du Fu — *shi yan zhi*; Chinese poetics as rasa under another name.
 - Christopher Alexander, *The Nature of Order I — The Phenomenon of Life* — fifteen properties of life-in-form; centers supporting centers. Rasa-detection-at-scale. *(Per Viveka's distinction: Nature of Order is Rasa's; Pattern Language is Prayoga's.)*
 
 ## Refusals
