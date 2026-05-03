@@ -63,6 +63,14 @@ process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
 effort = "xhigh"
 
+[[agent]]
+name = "explorer"
+prompt_template = "agents/explorer/prompt.template.md"
+provider = "codex"
+process_names = ["codex", "codex-raw"]
+[agent.option_defaults]
+effort = "xhigh"
+
 [[named_session]]
 template = "mayor"
 mode = "always"
@@ -93,4 +101,8 @@ mode = "on_demand"
 
 [[named_session]]
 template = "researcher"
+mode = "on_demand"
+
+[[named_session]]
+template = "explorer"
 mode = "on_demand"
