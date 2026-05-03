@@ -18,10 +18,15 @@ Files:
 - `vocabulary.md` — Li's speech-to-text vocabulary + project-name
   spellings.
 - `city.md` — overview of philosophy-city / Criopolis setup, the
-  council, the rigs.
+  council, the rigs, the ratified architecture intent
+  (hybrid-with-subsidy + role cohort).
 - `agents.md` — operational rules every agent must know
   (bead durability, citation style, codex process_names, agent
   scoping, reload semantics, ghq convention).
 - `mayor.md` — mayor-specific rules (token economy on
   diagnostics, no city-lifecycle commands, always-push-at-session-
-  end, cite beads with description).
+  end, cite beads with description, forum-round labeling so the
+  watcher can wake mayor).
+- `keel.md` — keel's contract: three labels (rule / guideline /
+  practice note), required six-field shape per rule, enforcement
+  by the code-reviewer role.

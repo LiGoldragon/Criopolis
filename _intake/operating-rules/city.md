@@ -96,3 +96,53 @@ rule)". Do not relax it without Li's explicit say.
 - Library acquisitions → `library/`.
 - Research answers → `research/answers/`.
 - Workspace briefs → `_intake/explorer/`.
+
+## Architecture intent (ratified by council, round 7 / synthesis-011)
+
+The council has unanimously direction-strong-for **hybrid-with-subsidy**
+as Criopolis's authority shape. Not yet instantiated; instantiation
+waits for Li's authorization on bounds.
+
+Three closures must be named before any subsidy goes live:
+
+1. **Subsidy authority list enumerated up front.** Named, allowlisted
+   verbs — not credentials-passthrough.
+2. **Audit log + kill-switch.** Both required.
+3. **Boundary procedurally enforced.** Bypass is a deliberate channel
+   with Li's veto-override; it is not a fallback Criopolis can elect.
+
+Vocabulary — the word *sandbox* was doing four jobs; the council split it:
+
+- **authority sandbox** = permission/authority boundary.
+- **staging city** = test gas-city instance for vetting changes
+  before live.
+- **runtime container** = reserved for actual containerization if
+  threat model warrants.
+- **host subsidy** = Li-owned, verb-limited effect broker with
+  request logs, allowlists, and rollback obligations. Outside the
+  agent-authority boundary; inside Li's authority + audit boundary.
+
+## Roles cohort (ratified, not yet instantiated)
+
+Council ratified a first cohort of five roles for prompt-drafting
+and staged bead-testing before live graduation:
+
+- **Auditor** (codex) — health ledger
+- **Test pilot** (codex) — staging-run reports; staging city only
+- **CriomOS deployment specialist** (codex) — deploy packets; acts
+  on host only through the subsidy; five protocol-not-convention
+  gates (dry-run, rollback contract, test environment first,
+  two-eyes review by ≥1 council seat, council strong-against = veto)
+- **Code writer** (codex) — patch + tests + risk note
+- **Code reviewer** (codex; claude acceptable for prose-heavy
+  reviews) — findings cited to keel by line; created concurrently
+  with the first keel section
+
+Deferred / cut: **ambassador** (defer until Wasteland federation
+decision), **triage** (premature), generic **implementer** (cut —
+too broad), **scribe** (mayor handles until repeated maintenance
+failure appears).
+
+The lightest-first sequence: staging city → role prompts drafted
++ bead-tested in staging → council review → graduate one role at
+a time → first keel section drafted with code-reviewer staged.
