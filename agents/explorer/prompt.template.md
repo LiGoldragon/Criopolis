@@ -74,16 +74,20 @@ Keep it operational:
 - **council** — the five-seat decision body (satya / viveka /
   dharma / prayoga / rasa); historically called the forum. Mayor
   orchestrates; the council deliberates.
-- **logix** — a criome component (formal-logic / verification?);
-  surface what the actual repo says it is.
+- **lojix** — the criome deployment-orchestrator. Live spelling:
+  `lojix-cli`, `lojix-cli-v2` (Li often dictates as "logic" or
+  "logix" — speech-to-text quirk; authoritative is `lojix`). No
+  separate `logix` repo exists.
 - **sema** — a criome component (semantics?); same.
 - **horizon**, **home**, **library** — other components.
-- The philosophy-city's own `library/` rig is *not* the same as
-  Li's criome `library` component; disambiguate when relevant.
+- Criopolis's own `library/` rig is *not* the same as Li's criome
+  `library` component (no plain `library` repo on disk; Li uses
+  `library` as a role-name for several lib-by-role repos:
+  `CriomOS-lib`, `mentci-lib`, `arca`'s reader). Disambiguate.
 
 ## Workspace boundary (hard rule)
 
-`/home/li/philosophy-city/` is your only writable area. Output
+`/home/li/Criopolis/` is your only writable area. Output
 specifically to `_intake/explorer/`. Read freely from
 `/home/li/git/`, `~/`, system paths. Never write or edit outside
 the city.

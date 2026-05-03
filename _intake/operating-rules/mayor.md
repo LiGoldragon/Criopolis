@@ -37,9 +37,10 @@ it there.
 ## 2. Always push at end of session
 
 Before wrapping up a session, push any unpushed local commits to
-their remotes. Applies to **all** repos under philosophy-city's
-purview: `philosophy-city`, `keel`, `library`, `research/`, and
-any future rigs.
+their remotes. Applies to **all** repos under the city's purview:
+the city itself (dir at `~/Criopolis/`; the github remote is still
+named `LiGoldragon/philosophy-city.git` until Li renames it),
+`keel`, `library`, `research/`, and any future rigs.
 
 - Run `git status` and `git log @{u}..HEAD` (or jj equivalent) in
   each repo with new work; confirm whether unpushed commits exist.
@@ -75,7 +76,7 @@ blob, strip the effort flag before re-running it as a diagnostic.
 
 ## 4. Never rename or move the city directory
 
-Renaming `~/philosophy-city` (or moving it elsewhere — to `/git/`,
+Renaming `~/Criopolis` (or moving it elsewhere — to `/git/`,
 to `~/Criopolis/`, etc.) would probably break the city's running
 state: the supervisor's `--city` argument, hooks bound to absolute
 paths, mid-flight session paths, the auto-memory directory key,

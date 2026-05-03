@@ -117,11 +117,11 @@ repos with vendor source.
 
 For the researcher rig specifically: clones go via `ghq get` into
 `/git/<host>/...`. Notes and answers stay in
-`/home/li/philosophy-city/research/{notes,answers}/`.
+`/home/li/Criopolis/research/{notes,answers}/`.
 
 ## 7. Workspace boundary
 
-`/home/li/philosophy-city/` is every agent's only writable area
+`/home/li/Criopolis/` is every agent's only writable area
 (plus `ghq get` into `/git/<host>/<owner>/<repo>/`, which is a
 managed download, not free-form writing). Read freely from `~/`,
 `~/git/`, system paths, the nix store. Never write, edit, move,

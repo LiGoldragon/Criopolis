@@ -5,14 +5,15 @@ purpose is. Read this if you don't already know the city.*
 
 ## Identity
 
-This city is **Criopolis** (envisioned name; transitioning from the
-working name `philosophy-city`). It is the gas-city on which the
-**high council** sits.
+This city is **Criopolis**. It is the gas-city on which the
+**high council** sits. (Renamed from the working name
+`philosophy-city` in May 2026.)
 
-Path: `/home/li/philosophy-city/` (subject to a council-deliberated
-relocation question; for now stays in `~/`).
+Path: `/home/li/Criopolis/`.
 
-Remote: `git@github.com:LiGoldragon/philosophy-city.git`.
+Remote: `git@github.com:LiGoldragon/philosophy-city.git` (the
+github repo retains its old name until Li renames it; the local
+city directory is canonical).
 
 ## Purpose
 
@@ -58,7 +59,7 @@ pragmatist / theorist / devil) at commit `philosophy-city a75e12b
 ## Workspace boundary (hard rule)
 
 The council and tools may **read** anywhere on the filesystem;
-**write** only inside `/home/li/philosophy-city/`. Each agent's
+**write** only inside `/home/li/Criopolis/`. Each agent's
 `prompt.template.md` carries this under "Workspace boundary (hard
 rule)". Do not relax it without Li's explicit say.
 
