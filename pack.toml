@@ -12,16 +12,18 @@ effort = "max"
 [[agent]]
 name = "satya"
 prompt_template = "agents/satya/prompt.template.md"
-provider = "claude"
+provider = "codex"
+process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
-effort = "max"
+effort = "xhigh"
 
 [[agent]]
 name = "viveka"
 prompt_template = "agents/viveka/prompt.template.md"
-provider = "claude"
+provider = "codex"
+process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
-effort = "max"
+effort = "xhigh"
 
 [[agent]]
 name = "dharma"
