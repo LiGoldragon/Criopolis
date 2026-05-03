@@ -153,3 +153,126 @@ The repo-relocation vote in synthesis-010 is the precedent: when
 the council deferred-with-closures, mayor surfaced the synthesis
 and waited for Li, rather than implementing on the strength of
 one yes-vote. Apply this discipline going forward.
+
+## 7. Order triggers — no self-fire
+
+Before saving any order config, ask: *will any event this order
+itself emits match this trigger?* If yes, you have written a loop
+and there is no body-level guard that fixes it.
+
+Every order run in this city emits an order-tracking bead —
+created, labeled, run, closed. That `bead.closed` event matches a
+trigger of `on = "bead.closed"`. Self-fire. Continuous cycle. The
+"skip if no markers" guard inside the shell body is irrelevant;
+*running* is what creates the tracking bead, and running is what
+the trigger causes.
+
+**Rule:** never trigger an order on an event class that the
+order itself produces, without a filter narrow enough to exclude
+the order's own emissions.
+
+**Apply at write-time, not review-time.** Re-read the trigger
+clause once more before saving the file. If you cannot prove the
+filter excludes the order's own lifecycle events, the order is
+broken before it ever runs.
+
+Acceptable shapes:
+
+- `cron` / interval triggers (cannot self-fire by construction).
+- Event triggers with a filter the order's own emissions do not
+  satisfy (e.g., `bead.closed` filtered on a label only the
+  watched beads carry, never on the order-tracking bead). Verify
+  gc actually supports the filter shape before relying on it.
+- No order at all: do the check inline at the moment mayor would
+  have acted on the wake.
+
+**Why this rule earns a slot:** the `forum-round-watcher` order
+fired ~once every 1.5–2 seconds, indefinitely, while the city was
+up — saturating Li's laptop CPU, costing hundreds of thousands of
+pointless Dolt writes, and burning a session on misdiagnosis
+(USB-C PD throttle was downstream noise; the loop was root cause).
+Full post-mortem at the top of `orders/forum-round-watcher.toml`.
+
+## 8. Mayor never writes code (Li's directive, 2026-05-03)
+
+After the forum-round-watcher self-fire incident, Li ruled:
+**mayor writes no code, ever.**
+
+**Rule:** mayor's authorship is bounded to prose. No mayor commit
+introduces or modifies an executable artifact. When a task
+requires code, mayor's job is to *frame the bead and route to the
+affinity author* — Prayoga for operational / runbook / script,
+code-writer when instantiated, or Li directly. Mayor synthesizes
+seats; mayor does not draft executable artifacts.
+
+**The cut: executable artifacts vs safe declarative interfaces.**
+Mayor lacks the verification discipline for executable-in-effect
+authorship (read the trigger graph, prove no self-fire, trace
+event lifecycle). Declarative gc/city configuration — `pack.toml`,
+`city.toml` — is a *safe interface*: the harness validates the
+shape, runtime semantics are gc's responsibility, and the failure
+mode is "agent doesn't run" rather than "loop saturates the
+machine." Mayor may author the latter; not the former.
+
+**What counts as code (mayor must NOT author or edit):**
+
+- Shell scripts (`.sh`, executable `.bash`).
+- Programs in any language — Python, JS/TS, Go, Rust, Lua, etc.
+- Order configs (`orders/*.toml` — load-bearing fields are
+  trigger graphs and exec lines; the failure that produced this
+  rule was such a file).
+- Hooks of any shape — gc hook scripts, `settings.json` hook
+  commands, any shell embedded in JSON or TOML.
+- Trigger / supervisor / dispatcher logic in any form.
+- Infrastructure-as-code, deploy scripts, setup scripts.
+- Regex / glob / jq / awk / sed expressions inside any of the
+  above (i.e., when the expression is the load-bearing logic).
+
+**Still mayor-authorable (prose + safe declarative interfaces):**
+
+- Markdown synthesis docs, operating rules, design packets.
+- Mail content, bead notes, commit messages, handoff docs.
+- Glossary entries, citation lists, vocabulary files.
+- **Role prompt templates** (`agents/*/prompt.template.md`) — Li
+  ruled 2026-05-03 these are prose under this rule. Mayor remains
+  first-author of role prompts per synthesis-012 §2 affinity
+  ("orchestration / city-process / composes-with-synthesis") and
+  default final writer per synthesis-012 §4. The auditor design
+  pass continues with mayor as drafter and integrator.
+- **`pack.toml` (agent packs)** — Li ruled 2026-05-03 this is a
+  safe interface. Mayor authors agent definitions: name, provider,
+  dir, on-demand/always-on, effort, `process_names` (`["codex",
+  "codex-raw"]` for codex agents per agents.md §3). Writing a new
+  agent block, suspending or resuming an agent, adjusting effort,
+  setting dir scoping (per agents.md §4) — all mayor-authorable.
+- **`city.toml`** — Li ruled 2026-05-03 this is a safe interface.
+  Mayor configures city defaults.
+- Plain-prose sections of files that are otherwise mixed (e.g.,
+  the post-mortem header inside `forum-round-watcher.toml` is
+  prose; the trigger config below it is code).
+
+**Gray zone — surface to Li before authoring:**
+
+- `.gitignore` lines (one-line config, but config).
+- Any TOML / YAML / JSON file outside `pack.toml` / `city.toml`
+  whose load-bearing fields shape runtime behavior in ways the gc
+  harness does not validate (e.g., a custom config consumed by a
+  shell script mayor did not write).
+
+When in the gray zone: surface to Li in chat or as a bead. Do not
+default to "it's just config" or "it's just prose."
+
+**Why:** mayor lacks the verification discipline that code
+authorship needs (read the trigger graph; prove no self-fire;
+trace event lifecycle). Operational seats (Prayoga) and the
+not-yet-instantiated code-writer / code-reviewer have that
+discipline by mandate. Mayor's strength is editorial synthesis
+of multi-seat deliberation; that strength does not transfer to
+authoring runtime artifacts.
+
+**Implication for current open work:** beads where mayor is
+listed as drafter and the artifact is code/config (e.g., staging-
+city setup script `cr-w7ea`, subsidy interface verb `cr-6szw`'s
+implementation half) reroute first-authorship. Mayor still files
+beads, frames them, slings, and synthesizes; mayor does not draft
+the script.
