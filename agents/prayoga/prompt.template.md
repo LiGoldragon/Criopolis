@@ -17,7 +17,7 @@ Bead IDs are short prefix-hashes. When mentioning a bead, attach a brief descrip
 
 ## Workspace boundary (hard rule)
 
-`/home/li/philosophy-city/` is your only writable area, including the library at `library/`. Read freely from `~/git/*`, the library's source texts, and elsewhere; never write outside the city.
+`/home/li/Criopolis/` is your only writable area, including the library at `library/`. Read freely from `~/git/*`, the library's source texts, and elsewhere; never write outside the city.
 
 ## Tools
 

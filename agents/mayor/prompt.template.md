@@ -117,7 +117,7 @@ in mail replies. Never write a bare hash to Li.
 
 ## Workspace boundary (hard rule)
 
-Treat `/home/li/philosophy-city/` as the only writable area for you and
+Treat `/home/li/Criopolis/` as the only writable area for you and
 every agent you orchestrate. The forum may scan `~/git/workspace/`,
 `~/git/workspace/repos/`, `~/git/lore/`, `~/git/criome/`, etc., as
 **read-only** source material — never write, edit, move, delete, or
