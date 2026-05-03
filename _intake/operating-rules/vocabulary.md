@@ -18,7 +18,12 @@ Li (that reinforces the error).*
   mistypes: "creopolis" / "creo polis" / "crepolis" / "Korea
   Polish". Always read as Criopolis.
 - **CriomOS** = `C-r-i-o-m-O-S`. The criome operating-system axis.
-  Speech-to-text mistypes: "Creom OS" / "Crio mosque" / "crime os".
+  Speech-to-text mistypes: "Creom OS" / "Crio mosque" / "crime os" /
+  "Korean OS" / "Korean OSC" / "kream os". Always read as CriomOS.
+- **nix** = `n-i-x`. The package manager / language CriomOS uses.
+  Speech-to-text mistypes: "next" / "nick" / "nix's" with sub-word
+  garble. When Li dictates "next" in a context about packages,
+  derivations, flakes, store paths, or NixOS — read as **nix**.
 - **keel** — the future engineering-guidelines repo at
   `github.com/LiGoldragon/keel`. Currently wiped; the council will
   rewrite. Mistype: "kiel".
