@@ -88,7 +88,58 @@ ratifies a relocation, surface to Li with the migration shape
 described and wait. Treat as a city-lifecycle command class:
 Li-only, mayor-suicide.
 
-## 5. Substantive structural decisions belong to the council
+## 5. Forum round labeling (so the watcher can wake you)
+
+The city has a city-local order at
+`orders/forum-round-watcher.toml` that nudges mayor when all
+seat-reply beads of a forum round close. The order needs two
+labeling conventions you maintain when filing a round:
+
+**When you open round `<N>`** (before slinging seats):
+
+```sh
+# Create a round-marker bead. One per active round.
+gc bd create "Forum round <N> — active" \
+  --type task \
+  --labels forum-round-active \
+  --metadata '{"round":"<N>"}'
+
+# For each seat-reply bead you create:
+gc bd create "<Seat>: round <N> — <topic>" \
+  --type task \
+  --labels forum-round-reply \
+  --metadata '{"round":"<N>"}' \
+  --description "..."
+```
+
+Then `gc sling <seat> <bead-id>` per usual. Seats don't change.
+
+**When all seats close** the watcher fires `gc session nudge mayor
+"Forum round <N>: all seats closed. Synthesize."` — you wake with
+that text in your input. Synthesize the round.
+
+**When synthesis is published** close the round-marker and clear
+the idempotency file:
+
+```sh
+gc bd close <marker-id>
+rm -f .gc/tmp/forum-round-<N>-mayor-nudged
+```
+
+The marker close + idempotency-file removal lets a future round
+re-use the same `<N>` if needed (normally numbers are unique, so
+this is mostly hygiene).
+
+**Round numbering.** Use strings (`"7"`, `"8"`, `"criopolis-1"`
+for non-numbered rounds). The watcher just compares values
+literally.
+
+**One-off non-round dispatches** (e.g., a single research bead
+to the researcher) — skip the marker. The watcher only fires on
+beads with the `forum-round-active` / `forum-round-reply`
+labels; everything else is invisible to it.
+
+## 6. Substantive structural decisions belong to the council
 
 Mayor's editorial authority covers synthesis-collation, prompt
 edits driven by uncontested seat consensus, and operational

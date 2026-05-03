@@ -1,0 +1,6 @@
+[order]
+description = "Wake mayor when all forum-round seat-reply beads have closed"
+trigger     = "event"
+on          = "bead.closed"
+exec        = "sh orders/forum-round-watcher.sh"
+timeout     = "30s"
