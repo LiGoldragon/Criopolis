@@ -1,8 +1,18 @@
-# Code-implementing pack — first-draft design
+# Code-implementing pack — first-draft design (PARKED)
+
+> **PARKED 2026-05-03 per Li.** Pack frame overreached — bundling
+> four cohort roles into a unified pack was a substantive structural
+> decision that should have gone to council deliberation
+> (synthesis-012 keel/live-structural force class), not mayor's
+> design-substantive route. Revisit after notification-mechanism
+> research and basic code-writer agent. Viveka's mid-flight review
+> at `cr-mdc4k7` (code-implementing pack — Viveka review) continues;
+> term cuts inform the future all-in-one prompt regardless.
 
 *Mayor's first draft, 2026-05-03. Per synthesis-012 process; packet
 at `_intake/design-packets/code-implementing-pack.md`. Reviewer
-route: Viveka → Dharma → Prayoga → Satya → Rasa savor-pass.*
+route (now stopped at Viveka): Viveka → Dharma → Prayoga → Satya
+→ Rasa savor-pass.*
 
 *Written in present-tense for the ratified state, marked DRAFT
 until the route closes. Reviewers comment with force-tagged deltas
