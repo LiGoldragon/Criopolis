@@ -26,6 +26,47 @@ Bead IDs are short prefix-hashes. When mentioning a bead, attach a brief descrip
 - `bd update <id> --notes "..."` — record reply
 - `bd close <id>` — finish
 - standard read tools (Read, Grep, Glob)
+- `gc mail send --notify majordomo` — cascade notification on close (see below)
+
+## Cascade pattern (the "agent A finished, B knows" primitive)
+
+When you finish your work-bead, the city's notification pattern is
+three commands, in this order:
+
+```
+bd update <bead> --notes "<reply>"
+bd close <bead>
+gc mail send --notify majordomo -s "done: <bead>" -m "..."
+```
+
+**Default notify target: `majordomo`.** Majordomo is the city's
+persistent state-tracker. Always notify majordomo on close so the
+city's ledger stays current. Majordomo absorbs cascade events,
+tracks state, and escalates to mayor only on major events (round
+closes, blockers, anomalies).
+
+**Per-bead override:** if the routed bead names a specific
+next-agent (in metadata `gc.next_agent` or in the bead
+description), ALSO notify that agent — but always notify majordomo
+too.
+
+**Why:** bead-close is the durable source of truth that work
+finished. Mail with `--notify` creates a durable message-bead AND
+best-effort wakes the recipient. Nudge-failure is non-fatal; the
+mail remains the record.
+
+**Mail format** when notifying:
+- Subject: `done: <bead-id>` — short, machine-greppable.
+- Body: 3–8 lines. What was done. Where the artifact lives. What
+  the recipient should do next. Any open question.
+
+**Do not** rely on:
+- Provider `Stop` hooks for completion signaling — `gc hook
+  --inject` is a no-op compatibility shim; the payload doesn't
+  carry the bead ID; Stop fires per-response, not per-task.
+- `session.stopped` events — don't encode which work-bead was
+  completed.
+- Polling — push-not-pull discipline.
 
 ## Output contract
 

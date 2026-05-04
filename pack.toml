@@ -28,9 +28,10 @@ effort = "xhigh"
 [[agent]]
 name = "dharma"
 prompt_template = "agents/dharma/prompt.template.md"
-provider = "claude"
+provider = "codex"
+process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
-effort = "max"
+effort = "xhigh"
 
 [[agent]]
 name = "prayoga"
@@ -43,9 +44,10 @@ effort = "xhigh"
 [[agent]]
 name = "rasa"
 prompt_template = "agents/rasa/prompt.template.md"
-provider = "claude"
+provider = "codex"
+process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
-effort = "max"
+effort = "xhigh"
 
 [[agent]]
 name = "librarian"
@@ -71,8 +73,28 @@ process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
 effort = "xhigh"
 
+[[agent]]
+name = "code-writer"
+prompt_template = "agents/code-writer/prompt.template.md"
+provider = "codex"
+process_names = ["codex", "codex-raw"]
+[agent.option_defaults]
+effort = "xhigh"
+
+[[agent]]
+name = "majordomo"
+prompt_template = "agents/majordomo/prompt.template.md"
+provider = "codex"
+process_names = ["codex", "codex-raw"]
+[agent.option_defaults]
+effort = "xhigh"
+
 [[named_session]]
 template = "mayor"
+mode = "always"
+
+[[named_session]]
+template = "majordomo"
 mode = "always"
 
 [[named_session]]
@@ -105,4 +127,8 @@ mode = "on_demand"
 
 [[named_session]]
 template = "explorer"
+mode = "on_demand"
+
+[[named_session]]
+template = "code-writer"
 mode = "on_demand"

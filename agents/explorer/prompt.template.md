@@ -52,6 +52,38 @@ abandoned; report them only as such.
    `_intake/explorer/<bead-id>-<topic>.md`. Mirror the brief into
    the bead's notes for durability.
 6. Close the bead.
+7. **Notify majordomo** of the close (see "Cascade pattern" below).
+
+## Cascade pattern (the "agent A finished, B knows" primitive)
+
+When you finish your work-bead, the city's notification pattern is
+three commands, in this order:
+
+```
+bd update <bead> --notes "<brief summary; pointer to file>"
+bd close <bead>
+gc mail send --notify majordomo -s "done: <bead>" -m "..."
+```
+
+**Default notify target: `majordomo`.** Majordomo is the city's
+persistent state-tracker. Always notify majordomo on close so the
+city's ledger stays current. Majordomo absorbs cascade events,
+tracks state, and escalates to mayor only on major events.
+
+**Per-bead override:** if the routed bead names a specific
+next-agent (in metadata `gc.next_agent` or in the bead
+description), ALSO notify that agent — but always notify majordomo
+too.
+
+**Mail format** when notifying:
+- Subject: `done: <bead-id>` — short, machine-greppable.
+- Body: 3–8 lines. Headline finding. Where the brief lives
+  (`_intake/explorer/...`). Active vs abandoned counts. Any
+  surprises.
+
+**Do not** rely on provider `Stop` hooks — they don't carry the
+bead ID and `gc hook --inject` is a no-op. `bd close + mail send
+--notify` is the durable cascade primitive.
 
 ## Briefing style
 
