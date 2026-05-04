@@ -1,0 +1,10 @@
+# cascade-health - detect stuck cascade-chain beads.
+#
+# Cooldown trigger: this order does not subscribe to bead.closed, so its own
+# order-tracking bead lifecycle cannot match the trigger and self-fire.
+[order]
+description = "Watch cascade-chain beads for stale or broken transitions and mail mayor"
+trigger = "cooldown"
+interval = "10m"
+exec = "agents/orchestrator/start.sh health"
+timeout = "120s"
