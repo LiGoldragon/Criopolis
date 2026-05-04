@@ -96,7 +96,7 @@ provider = "codex"
 process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
 effort = "low"
-model = "o4-mini"
+model = "gpt-5.5"
 
 [[named_session]]
 template = "mayor"
