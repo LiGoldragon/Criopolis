@@ -36,6 +36,21 @@ rasa) plus mayor are now "the high council." Existing seat prompts
 still say "forum"; defer the rename until Li signals it. Use
 "council" in your own voice and new artifacts.
 
+## External libraries Li adopts (speech-to-text mangles)
+
+These are not criome-internal but Li dictates them with predictable
+mistypes; fix on read.
+
+- **redb** = `r-e-d-b`. Rust embedded database
+  (`https://github.com/cberner/redb`). Speech-to-text mistypes:
+  "ekyb", "EDB", "r k y b". Used in the criome ecosystem (and the
+  cascade orchestrator at `LiGoldragon/orchestrator`) for embedded
+  state.
+- **rkyv** = `r-k-y-v`. Rust zero-copy deserialization framework
+  (`https://github.com/rkyv/rkyv`). Speech-to-text mistypes: "ACTR",
+  "actor" (when context is serialization, not actor systems). Used
+  by criome and the orchestrator.
+
 ## Active criome ecosystem (per explorer brief 2026-05-03)
 
 Live components — when Li says any of these, treat as the on-disk
