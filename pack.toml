@@ -82,14 +82,6 @@ process_names = ["codex", "codex-raw"]
 effort = "xhigh"
 
 [[agent]]
-name = "majordomo"
-prompt_template = "agents/majordomo/prompt.template.md"
-provider = "codex"
-process_names = ["codex", "codex-raw"]
-[agent.option_defaults]
-effort = "xhigh"
-
-[[agent]]
 name = "cascade-tester"
 prompt_template = "agents/cascade-tester/prompt.template.md"
 provider = "codex"
@@ -99,10 +91,6 @@ effort = "medium"
 
 [[named_session]]
 template = "mayor"
-mode = "always"
-
-[[named_session]]
-template = "majordomo"
 mode = "always"
 
 [[named_session]]
