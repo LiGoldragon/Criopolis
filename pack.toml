@@ -89,6 +89,15 @@ process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
 effort = "medium"
 
+[[agent]]
+name = "committer"
+prompt_template = "agents/committer/prompt.template.md"
+provider = "codex"
+process_names = ["codex", "codex-raw"]
+[agent.option_defaults]
+effort = "low"
+model = "o4-mini"
+
 [[named_session]]
 template = "mayor"
 mode = "always"
@@ -131,4 +140,8 @@ mode = "on_demand"
 
 [[named_session]]
 template = "cascade-tester"
+mode = "on_demand"
+
+[[named_session]]
+template = "committer"
 mode = "on_demand"
