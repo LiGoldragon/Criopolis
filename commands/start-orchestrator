@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_directory="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+city_directory="$(CDPATH= cd -- "$script_directory/.." && pwd)"
+
+usage() {
+  cat <<'USAGE'
+usage: commands/start-orchestrator [orchestrator arguments...]
+
+Runs the installed Rust orchestrator against this Criopolis checkout.
+
+Examples:
+  commands/start-orchestrator
+  commands/start-orchestrator --once
+USAGE
+}
+
+case "${1:-}" in
+  -h | --help)
+    usage
+    exit 0
+    ;;
+esac
+
+if ! command -v orchestrator >/dev/null 2>&1; then
+  printf 'start-orchestrator: missing orchestrator binary; update the CriomOS-home profile first.\n' >&2
+  exit 127
+fi
+
+exec orchestrator --city "$city_directory" "$@"
