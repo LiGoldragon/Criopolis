@@ -88,6 +88,7 @@ provider = "codex"
 process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
 effort = "medium"
+model = "gpt-5.4-mini"
 
 [[agent]]
 name = "committer"
@@ -96,7 +97,7 @@ provider = "codex"
 process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
 effort = "low"
-model = "gpt-5.5"
+model = "gpt-5.4-mini"
 
 [[named_session]]
 template = "mayor"
