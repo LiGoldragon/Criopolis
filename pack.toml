@@ -89,6 +89,14 @@ process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
 effort = "xhigh"
 
+[[agent]]
+name = "cascade-tester"
+prompt_template = "agents/cascade-tester/prompt.template.md"
+provider = "codex"
+process_names = ["codex", "codex-raw"]
+[agent.option_defaults]
+effort = "medium"
+
 [[named_session]]
 template = "mayor"
 mode = "always"
@@ -131,4 +139,8 @@ mode = "on_demand"
 
 [[named_session]]
 template = "code-writer"
+mode = "on_demand"
+
+[[named_session]]
+template = "cascade-tester"
 mode = "on_demand"
