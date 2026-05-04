@@ -1,6 +1,55 @@
-[order]
-description = "Wake mayor when all forum-round seat-reply beads have closed"
-trigger     = "event"
-on          = "bead.closed"
-exec        = "sh orders/forum-round-watcher.sh"
-timeout     = "30s"
+# =============================================================================
+# DISABLED 2026-05-03 BY LI (via Claude diagnosis).
+#
+# THIS ORDER WAS A SELF-TRIGGERING INFINITE LOOP.
+#
+# The bug, in one sentence:
+#   trigger = "event" on "bead.closed", but every run of an order creates
+#   an order-tracking bead that gets CLOSED when the order completes —
+#   which is itself a bead.closed event — which fires the order again.
+#
+# Result: continuous cycle, ~one full bead create/update/close round
+# every 1.5–2 seconds, forever, while the city is up. Each cycle =
+# ~7 Dolt writes (create + 3 label/state updates + close + reconcile).
+# That's ~3–5 Dolt writes/second indefinitely, plus supervisor work
+# reacting to every event. Hours of city uptime = hundreds of thousands
+# of pointless Dolt writes and tens of thousands of order.fired events.
+#
+# Visible damage:
+#   - Laptop became hard to use (CPU saturated by gc supervisor).
+#   - User initially blamed beads/dolt for being "CPU hungry" — they
+#     were not. They were being hammered by THIS loop.
+#   - Multiple sessions wasted diagnosing the wrong thing (a USB-C PD
+#     hardware throttle was discovered, but that was downstream noise;
+#     this loop was the root cause of the perceived CPU pressure).
+#
+# Why this design is broken:
+#   An order whose own lifecycle emits the event it triggers on cannot
+#   be self-throttling. There is no exit condition in the trigger graph.
+#   Adding an exit in exec() (e.g. "skip if no markers") doesn't help —
+#   the order still RUNS every cycle, which creates the tracking bead,
+#   which closes, which re-fires. The fix has to be in the trigger, not
+#   the body.
+#
+# Acceptable redesigns (pick one when reviving):
+#   1. Switch trigger to "cron" / interval (e.g. once per minute). The
+#      watcher polls instead of reacting. Loses event-time response but
+#      cannot self-fire.
+#   2. Make the trigger a FILTERED bead.closed — only fire when the
+#      closed bead carries label=forum-round-reply. The order's own
+#      tracking beads carry label=order-tracking, not forum-round-reply,
+#      so they don't match. Verify gc supports label filters in trigger
+#      conditions before relying on this.
+#   3. Drop the standalone watcher and have mayor check round state
+#      directly when synthesizing — no order needed at all.
+#
+# Original definition is preserved below, commented out, so that the
+# next reader can see exactly what was deployed when this fired.
+# =============================================================================
+
+# [order]
+# description = "Wake mayor when all forum-round seat-reply beads have closed"
+# trigger     = "event"
+# on          = "bead.closed"
+# exec        = "sh orders/forum-round-watcher.sh"
+# timeout     = "30s"
