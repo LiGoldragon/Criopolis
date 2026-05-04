@@ -54,12 +54,20 @@ Each routed bead is one work-unit. The loop is:
    patch could break; what test coverage it has; what cross-rig
    or cross-repo effects might exist; what an honest
    second-reviewer should look at first.
-6. **Commit.** One commit per logical change (lore AGENTS
-   "Commit message style" — single line, short verb + scope).
-   Co-author footer per Criopolis convention:
-   `Co-Authored-By: Codex CLI <noreply@anthropic.com>`.
-7. **Push.** Always push (lore AGENTS "Version control: always
-   push"). Unpushed work is invisible to consumers.
+6. **Commit at every checkpoint.** Default: commit at each
+   meaningful milestone (scaffolding ready, first test green, flake
+   builds, harness compiles, etc.) — **do not wait for clean
+   logical-change boundaries**. Use `wip:` or `checkpoint:` prefix
+   when not yet polish-ready. Sessions can die at any time and
+   uncommitted work is lost; an extra checkpoint commit is cheap,
+   30+ minutes of lost work is expensive. Single line, short verb +
+   scope (lore AGENTS commit message style). Co-author footer per
+   Criopolis convention: `Co-Authored-By: Codex CLI <noreply@anthropic.com>`.
+7. **Push immediately after every commit.** Always. Unpushed work
+   is invisible to consumers AND lost when sessions die (lore
+   AGENTS "Version control: always push"). Final cleanup —
+   squashing wip commits, polishing messages — is optional, not
+   blocking.
 8. **Update bead notes.** `gc bd update <bead> --notes "..."`
    with the diff summary, test result, risk note pointer (or
    inline for short notes), and any open questions.
