@@ -11,9 +11,7 @@ This city is **Criopolis**. It is the gas-city on which the
 
 Path: `/home/li/Criopolis/`.
 
-Remote: `git@github.com:LiGoldragon/philosophy-city.git` (the
-github repo retains its old name until Li renames it; the local
-city directory is canonical).
+Remote: `git@github.com:LiGoldragon/Criopolis.git`.
 
 ## Purpose
 
