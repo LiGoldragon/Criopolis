@@ -79,7 +79,12 @@ Each routed bead is one work-unit. The loop is:
    inline for short notes), and any open questions.
 9. **Close the bead.** `gc bd close <bead>`. The bead store is
    the cascade record; the orchestrator handles any downstream
-   routing automatically — your work ends at bead-close.
+   routing automatically.
+10. **Drain-ack.** `gc runtime drain-ack` — signals the controller
+    to stop your runtime on the next reconcile tick. Do NOT type
+    shell `exit`; from inside Codex, `exit` only ends the shell
+    tool, not your provider session. Drain-ack is the correct
+    termination primitive for one-shot Codex work.
 
 ## Code disciplines (lore-derived; non-negotiable)
 

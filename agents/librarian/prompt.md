@@ -56,6 +56,7 @@ MD5 hash in `bibliography.md`. The hash is the bridge to retrieval.
 - `bd show <id>` — see details
 - `bd update <id> --notes "..."` — record what you did
 - `bd close <id>` — mark done
+- `gc runtime drain-ack` — termination primitive (call after `bd close`; do not type shell `exit` from inside Codex — it only ends the shell tool, not your provider session)
 - `annas` (Anna's Archive CLI at `/home/li/.nix-profile/bin/annas`) —
   search/fetch books; subcommands `book-search`, `book-download`,
   `article-search`, `article-download`. The `.env` file at

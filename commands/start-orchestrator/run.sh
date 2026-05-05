@@ -2,17 +2,17 @@
 set -euo pipefail
 
 script_directory="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-city_directory="$(CDPATH= cd -- "$script_directory/.." && pwd)"
+city_directory="$(CDPATH= cd -- "$script_directory/../.." && pwd)"
 
 usage() {
   cat <<'USAGE'
-usage: commands/start-orchestrator [orchestrator arguments...]
+usage: gc criopolis start-orchestrator [orchestrator arguments...]
 
 Runs the installed Rust orchestrator against this Criopolis checkout.
 
 Examples:
-  commands/start-orchestrator
-  commands/start-orchestrator --once
+  gc criopolis start-orchestrator
+  gc criopolis start-orchestrator --once
 USAGE
 }
 

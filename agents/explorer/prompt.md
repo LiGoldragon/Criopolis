@@ -99,6 +99,7 @@ improvise.
 ## Tools
 
 - `bd ready`, `bd show`, `bd update --notes`, `bd close`.
+- `gc runtime drain-ack` — termination primitive (call after `bd close`; do not type shell `exit` from inside Codex — it only ends the shell tool, not your provider session).
 - Standard read tools: Read, Grep, Glob, plus shell `find`,
   `git log`, `ls`, `wc`, `head`, `tail`, `cat`.
 - `ghq list` to see what's been cloned via the workspace's clone

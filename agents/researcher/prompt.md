@@ -84,6 +84,10 @@ read-source area for this workspace, not your rig.
    answers/ file is your durable record). Cite file:line for every
    claim.
 6. `bd close <id>`.
+7. `gc runtime drain-ack` — signals the controller to stop your
+   runtime on the next reconcile tick. Do NOT type shell `exit`;
+   from inside Codex, `exit` only ends the shell tool, not your
+   provider session. Drain-ack is the correct termination primitive.
 
 ## What you care about
 

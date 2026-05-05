@@ -2,6 +2,9 @@
 provider = "claude"
 install_agent_hooks = ["claude", "codex"]
 
+[session]
+startup_timeout = "300s"
+
 [daemon]
 formula_v2 = true
 patrol_interval = "30s"

@@ -2,104 +2,6 @@
 name = "criopolis"
 schema = 2
 
-[[agent]]
-name = "mayor"
-prompt_template = "agents/mayor/prompt.template.md"
-provider = "claude"
-[agent.option_defaults]
-effort = "max"
-
-[[agent]]
-name = "satya"
-prompt_template = "agents/satya/prompt.template.md"
-provider = "codex"
-process_names = ["codex", "codex-raw"]
-[agent.option_defaults]
-effort = "xhigh"
-
-[[agent]]
-name = "viveka"
-prompt_template = "agents/viveka/prompt.template.md"
-provider = "codex"
-process_names = ["codex", "codex-raw"]
-[agent.option_defaults]
-effort = "xhigh"
-
-[[agent]]
-name = "dharma"
-prompt_template = "agents/dharma/prompt.template.md"
-provider = "codex"
-process_names = ["codex", "codex-raw"]
-[agent.option_defaults]
-effort = "xhigh"
-
-[[agent]]
-name = "prayoga"
-prompt_template = "agents/prayoga/prompt.template.md"
-provider = "codex"
-process_names = ["codex", "codex-raw"]
-[agent.option_defaults]
-effort = "xhigh"
-
-[[agent]]
-name = "rasa"
-prompt_template = "agents/rasa/prompt.template.md"
-provider = "codex"
-process_names = ["codex", "codex-raw"]
-[agent.option_defaults]
-effort = "xhigh"
-
-[[agent]]
-name = "librarian"
-prompt_template = "agents/librarian/prompt.template.md"
-provider = "codex"
-process_names = ["codex", "codex-raw"]
-[agent.option_defaults]
-effort = "xhigh"
-
-[[agent]]
-name = "researcher"
-suspended = true
-prompt_template = "agents/researcher/prompt.template.md"
-provider = "codex"
-process_names = ["codex", "codex-raw"]
-[agent.option_defaults]
-effort = "xhigh"
-
-[[agent]]
-name = "explorer"
-prompt_template = "agents/explorer/prompt.template.md"
-provider = "codex"
-process_names = ["codex", "codex-raw"]
-[agent.option_defaults]
-effort = "xhigh"
-
-[[agent]]
-name = "code-writer"
-prompt_template = "agents/code-writer/prompt.template.md"
-provider = "codex"
-process_names = ["codex", "codex-raw"]
-[agent.option_defaults]
-effort = "xhigh"
-
-[[agent]]
-name = "cascade-tester"
-prompt_template = "agents/cascade-tester/prompt.template.md"
-provider = "codex"
-process_names = ["codex", "codex-raw"]
-[agent.option_defaults]
-effort = "medium"
-model = "gpt-5.5"
-
-[[agent]]
-name = "committer"
-prompt_template = "agents/committer/prompt.template.md"
-provider = "codex"
-process_names = ["codex", "codex-raw"]
-[agent.option_defaults]
-effort = "low"
-model = "gpt-5.5"
-
 [[named_session]]
 template = "mayor"
 mode = "always"
@@ -147,3 +49,15 @@ mode = "on_demand"
 [[named_session]]
 template = "committer"
 mode = "on_demand"
+
+[[named_session]]
+template = "maintainer"
+mode = "on_demand"
+
+[providers]
+[providers.claude]
+base = "builtin:claude"
+
+[providers.codex]
+base = "builtin:codex"
+ready_delay_ms = 0

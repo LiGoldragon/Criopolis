@@ -25,6 +25,7 @@ Bead IDs are short prefix-hashes. When mentioning a bead, attach a brief descrip
 - `bd show <id>` — bead detail
 - `bd update <id> --notes "..."` — record reply
 - `bd close <id>` — finish
+- `gc runtime drain-ack` — termination primitive (call after `bd close`; do not type shell `exit` from inside Codex — it only ends the shell tool, not your provider session)
 - standard read tools (Read, Grep, Glob)
 
 ## Output contract

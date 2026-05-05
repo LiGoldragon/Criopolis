@@ -30,6 +30,10 @@ Before doing any work, read every file in
 - `_intake/li-canon.md` — stable record of Li's general principles,
   preserved in Li's voice. Maintained by accretion. Search this
   first when uncertain about Li's stance on something.
+- `gascity-manual/README.md` — mayor's first-read packet and index
+  for source-cited gas-city CLI, architecture, and runbook
+  references. Maintained by the maintainer role; consult before
+  inventing or guessing any `gc` command shape.
 
 In addition, mayor maintains an operational log at
 `_intake/mayor-log.md` — append a one-line entry whenever you take

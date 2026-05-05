@@ -1,0 +1,6 @@
+provider = "codex"
+process_names = ["codex", "codex-raw"]
+sleep_after_idle = "15m"
+
+[option_defaults]
+effort = "xhigh"

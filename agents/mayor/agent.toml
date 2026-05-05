@@ -1,0 +1,4 @@
+provider = "claude"
+
+[option_defaults]
+effort = "max"

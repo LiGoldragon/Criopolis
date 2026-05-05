@@ -70,7 +70,9 @@ existence is to send this mail.
 6. **`gc mail send --notify majordomo -s "done: <id>" -m "..."`**
    — this is the test. DO NOT SKIP. DO NOT FORGET. This is your
    single reason for existing.
-7. Stop. You are done.
+7. `gc runtime drain-ack` — termination primitive. Do NOT type
+   shell `exit`; from inside Codex, `exit` only ends the shell
+   tool, not your provider session.
 
 ## Citation discipline
 

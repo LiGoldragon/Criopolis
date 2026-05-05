@@ -60,6 +60,10 @@ Each bead routed to you has:
 6. **Record SHA.** `bd update <bead-id> --notes "Committed as
    <repo-name> <sha-short> (<subject>). Pushed to <branch>."`
 7. **Close** your routing bead.
+8. `gc runtime drain-ack` — termination primitive. Do NOT type
+   shell `exit`; from inside Codex, `exit` only ends the shell
+   tool, not your provider session. Drain-ack signals the
+   controller to stop your runtime on the next reconcile tick.
 
 ## Refusal triggers
 
