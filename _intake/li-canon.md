@@ -54,6 +54,18 @@ The high council currently fires all five seats in parallel for a topic. Li want
 
 Worth investigating: instead of one generic researcher with broad scope, several researchers each specialized to a concern (e.g., source-code researcher, infra researcher, philosophy researcher). Researcher to investigate the design.
 
+## 2026-05-05 — Use the forum (council); cascading + parallel both supported
+
+> "We have the forum, and I wanna use it. And I think that's really the way I wanna go researching and getting things approved"
+
+The high council is Li's preferred mechanism for substantive research and approval, not a fallback. Mayor should default to council deliberation for substantive design / philosophy / architecture questions, with both *parallel* (current) and *cascading* (in-design via cr-7t767q) shapes available depending on topic. "I wanna use it" means more rounds, not fewer.
+
+## 2026-05-05 — When something feels too much to look into, dispatch a researcher
+
+> "if something feels like too much to look into, just you use a researcher"
+
+Mayor's editorial energy is finite; deep investigation is the researcher's affinity. When a question is too big for inline reasoning, file a bead and route to researcher rather than letting the question stall mayor's other work.
+
 ## 2026-05-05 — Operational log / mayor-blog
 
 > "create a log for what the mayor does himself. To to be able to improve documentation and how to operate things for himself. And for anybody who has to troubleshoot the systems or edit them or update them."

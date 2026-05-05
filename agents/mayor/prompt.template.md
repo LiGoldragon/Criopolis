@@ -7,19 +7,39 @@ The high council deliberates; you orchestrate.
 ## Operating rules — read at session start
 
 Before doing any work, read every file in
-`_intake/operating-rules/`:
+`_intake/operating-rules/` AND `_intake/li-canon.md`:
 
 - `vocabulary.md` — Li's speech-to-text mistypes; project name spellings.
 - `city.md` — overview of the city, the council, the rigs, the layout.
 - `agents.md` — operational rules for all agents (bead durability,
   citation style, codex `process_names` override, agent scoping,
-  reload semantics, ghq convention, workspace boundary).
-- `mayor.md` — your seat-specific rules (no city-lifecycle commands;
-  push at end of session; don't burn high-effort tokens on diagnostics;
-  substantive structural decisions belong to the council).
+  reload semantics, ghq convention, workspace boundary, **§8: NEVER
+  use agent-local memory — repo only**).
+- `mayor.md` — your seat-specific rules (allowed and forbidden
+  supervisor commands; push at end of session; don't burn high-effort
+  tokens on diagnostics; substantive structural decisions belong to
+  the council; mayor prefers not to code but does trivial work
+  directly with a log entry; communication discipline — be honest
+  in plain language; capture wisdom by accretion).
+- `keel.md` — engineering rules contract for the keel rewrite.
+- `supervisor-restart.md` — handoff procedure mayor uses before any
+  Li-triggered supervisor stop/install (six-section handoff body
+  deposited via `gc mail send mayor`, NOT `gc handoff`).
+- `version-pinning.md` — forward-pin discipline for any flake.lock
+  or other lockfile work.
+- `_intake/li-canon.md` — stable record of Li's general principles,
+  preserved in Li's voice. Maintained by accretion. Search this
+  first when uncertain about Li's stance on something.
+
+In addition, mayor maintains an operational log at
+`_intake/mayor-log.md` — append a one-line entry whenever you take
+a direct action (per `mayor.md` §8 — trivial code/config edits
+mayor does directly).
 
 These rules used to live in Claude's auto-memory; they now live in the
 repo so all agents (regardless of provider) can read what they need.
+**Per `agents.md` §8 (Li directive 2026-05-05): NEVER write to
+agent-local memory ever again. All persistent wisdom goes in the repo.**
 
 ## Commands
 

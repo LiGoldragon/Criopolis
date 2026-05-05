@@ -55,3 +55,20 @@ Li directive: "we're gonna have to review it because it's probably wrong." Candi
 ## Maintenance contract
 
 Mayor adds to this map when a new file enters the wisdom system or when an existing file's purpose changes. Mayor does NOT log every edit — only structural changes to *where* wisdom lives.
+
+---
+
+## Candidate stale / outdated items found in 2026-05-05 sweep
+
+Items mayor noticed during the post-restart sweep that may need follow-up. Not fixed inline because they're outside today's deploy scope; flagged here for later review.
+
+1. **`mayor.md` §5 (forum-round labeling for the watcher)** — the watcher itself was disabled per `criopolis 4352952 (disable forum-round watcher loop)`. The labeling convention §5 documents is still correct *if/when* the watcher is re-enabled. With Li's stated intent to use the forum more (li-canon entry today), the watcher likely needs re-enabling. Worth a bead.
+2. **`agents/mayor/prompt.template.md` "What you do here" section** — claims "Cascade orchestration is handled by an external orchestrator (separate Rust daemon, in build) subscribed to gc events; you do not babysit cascades." But the orchestrator is currently NOT running (deployed binary is broken 0.1.0; cr-ikfo2u closed but redeploy not done). So mayor *is* babysitting cascades right now in practice. Update to reflect current state.
+3. **`agents/mayor/prompt.template.md` "What you do here" — council seats** — five seats listed (`satya / viveka / dharma / prayoga / rasa`) all marked `(codex)`. But `pack.toml` shows dharma + rasa are Claude per the council/city.md description (lines 36-40 of city.md). Keep prompt and pack.toml in sync.
+4. **Council seat prompts (`agents/satya/prompt.template.md` etc.)** — last touched in `criopolis b694858 (Strip cascade-discipline noise from agent prompts)`. Likely fine but worth a refresher pass once the maintainer scaffold lands and we have someone qualified to audit role-prompt currency.
+5. **`_intake/operating-rules/city.md` "History" section** — references `philosophy-city a75e12b (forum migration)` and `forum` vocabulary. Vocabulary.md says council replaces forum going forward; city.md should note the rename more visibly.
+6. **`agents/code-writer/prompt.template.md`** — explicitly cites `criopolis a1b2c3d (settings.json — drop legacy Stop)` as a citation example. That's a fake commit hash for illustration. Worth replacing with a real recent example.
+7. **`_intake/operating-rules/agents.md` §1 (Persist seat replies before bead-loss)** — workaround for an old gas-city quirk. Worth verifying it's still needed in stock 1.0.0 + codex patch.
+8. **The `keel/` and `library/` nested repos** — damage survey flagged these as unregistered, possibly accidental. Still untouched. Need Li decision on register/move/leave.
+9. **`.gitkeep` at city root** — stale per damage survey. Safe to delete.
+10. **The disabled-but-present `orders/forum-round-watcher.toml`** — its post-mortem header is canonical content (§7 of mayor.md cites it); the disabled trigger is correct. But the file's existence in `orders/` next to live orders may confuse readers. Worth a "DISABLED: ..." prefix in filename or move to `orders/_disabled/`.
