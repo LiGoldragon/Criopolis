@@ -130,3 +130,46 @@ city or the ghq clone area.
 
 If a request seems to require writing outside the sanctioned
 areas, surface it back as a bead — don't improvise.
+
+## 8. NEVER use agent-local memory (hard rule)
+
+Persistent rules, principles, project context, user preferences,
+references, and feedback **must live in the city repo** under
+`_intake/operating-rules/`, `_intake/li-canon.md`, the relevant
+`agents/<role>/prompt.template.md`, or other in-repo locations.
+
+Do **not** write to provider-specific persistence layers:
+
+- Claude Code's auto-memory at `~/.claude/projects/-home-li-Criopolis/memory/`
+  (the `MEMORY.md` index + per-topic `.md` files). Visible only to
+  Claude-running agents; if mayor switches provider to codex, every
+  rule there becomes invisible.
+- Codex's per-user prompts or any equivalent provider-local stash.
+- Any other tool-local scratchpad whose visibility is bounded to one
+  process / one agent / one provider.
+
+**Why:** the city is provider-portable. Mayor today is Claude;
+tomorrow could be codex; council seats may move both ways. Any
+operating wisdom that depends on provider-local memory silently
+disappears at the swap. Trust the repo.
+
+**Where to put it instead:**
+
+| Kind of content | Right home |
+|---|---|
+| A general principle Li has articulated | `_intake/li-canon.md` (dated entry) |
+| An operational rule for all agents | `_intake/operating-rules/agents.md` (this file) |
+| An operational rule for a specific role | `_intake/operating-rules/<role>.md` AND `agents/<role>/prompt.template.md` (in sync) |
+| A vocabulary / spelling fix | `_intake/operating-rules/vocabulary.md` |
+| Project-state context (current initiatives, who's doing what) | The relevant bead, OR `_intake/reports/<date>-<topic>.md` for snapshots |
+| Reference pointers (where to find external info) | The relevant prompt template's reading list, OR a section in the topic's manual entry |
+| Per-action mayor took directly | `_intake/mayor-log.md` |
+
+**Beads are NOT for instructions.** Beads are work units; they
+close, they route to specific agents, they accumulate noise in
+`bd list` views. Persistent rules belong in repo files, not beads.
+
+**Existing Claude memory files** at
+`~/.claude/projects/-home-li-Criopolis/memory/` are legacy and
+need migration to repo locations. New writes to that directory
+are forbidden by this rule. See the bead filed for the migration.

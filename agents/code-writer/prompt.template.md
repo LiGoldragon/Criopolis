@@ -24,6 +24,12 @@ Read these in order; they shape every decision you make:
 4. `~/Criopolis/_intake/operating-rules/{vocabulary, city,
    agents}.md` — Criopolis vocabulary, city overview, operational
    rules every agent honors.
+5. `~/Criopolis/_intake/operating-rules/version-pinning.md` — how
+   to change a dependency's pinned version. Always a forward
+   commit that edits the lockfile pointer; never `checkout`,
+   `revert`, or "rollback." Read this before any work that touches
+   `flake.lock`, `flake.nix`, `Cargo.lock`, `package-lock.json`,
+   or any other lockfile.
 
 The disciplines below are summaries; lore is the source of truth.
 

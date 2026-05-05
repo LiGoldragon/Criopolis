@@ -59,6 +59,7 @@ effort = "xhigh"
 
 [[agent]]
 name = "researcher"
+suspended = true
 prompt_template = "agents/researcher/prompt.template.md"
 provider = "codex"
 process_names = ["codex", "codex-raw"]
@@ -88,7 +89,7 @@ provider = "codex"
 process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
 effort = "medium"
-model = "gpt-5.4-mini"
+model = "gpt-5.5"
 
 [[agent]]
 name = "committer"
@@ -97,7 +98,7 @@ provider = "codex"
 process_names = ["codex", "codex-raw"]
 [agent.option_defaults]
 effort = "low"
-model = "gpt-5.4-mini"
+model = "gpt-5.5"
 
 [[named_session]]
 template = "mayor"

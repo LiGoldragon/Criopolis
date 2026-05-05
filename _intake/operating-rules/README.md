@@ -28,3 +28,11 @@ Files:
 - `keel.md` — keel's contract: three labels (rule / guideline /
   practice note), required six-field shape per rule, enforcement
   by the code-reviewer role.
+- `version-pinning.md` — how to change a dependency's pinned
+  version: forward commit on main, edit lockfile pointer; never
+  checkout / revert / "roll back." Read by code-writer (and any
+  agent touching `flake.lock`, `Cargo.lock`, `package-lock.json`).
+- `supervisor-restart.md` — handoff procedure mayor uses before
+  Li restarts the supervisor. Six-section handoff body deposited
+  via `gc mail send mayor` (not `gc handoff`); post-restart mayor
+  reads it on wake and runs the verify-after-wake checklist.
