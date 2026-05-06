@@ -1,0 +1,7 @@
+scope = "city"
+nudge = "Check your hook for work assignments."
+work_dir = ".gc/agents/dogs/{{.AgentBase}}"
+overlay_dir = ".gc/system/packs/maintenance/agents/dog/overlay"
+idle_timeout = "2h"
+min_active_sessions = 0
+max_active_sessions = 3
