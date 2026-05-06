@@ -9,3 +9,6 @@ startup_timeout = "300s"
 formula_v2 = true
 patrol_interval = "30s"
 max_restarts = 5
+
+[orders]
+skip = ["mol-dog-compactor"]
